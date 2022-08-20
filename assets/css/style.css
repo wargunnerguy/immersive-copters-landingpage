@@ -8,9 +8,13 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  overflow-x: hidden;
 }
 
 a {
@@ -133,11 +137,14 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
+  background: rgba(30, 30, 30, 0.3);
+
 }
+
 
 #header.header-scrolled,
 #header.header-inner-pages {
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(30, 30, 30, 1);
 }
 
 #header .logo {
@@ -419,7 +426,74 @@ h6 {
   right: 0;
   top: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: -2;
+}
+
+.text_on_video {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  font-size: 40px;
+  position: absolute;
+  width: 450px;
+  left: 50%;
+  margin-left: -225px;
+  height: 40px;
+  top: 50%;
+  margin-top: -20px;
+}
+
+p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 220px;
+  opacity: 0;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  float: left;
+  transform: translateZ(25px);
+  transform-origin: 50% 50% 25px;
+}
+
+.letter.out {
+  transform: rotateX(90deg);
+  transition: transform 0.32s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: rotateX(-90deg);
+}
+
+.letter.in {
+  transform: rotateX(0deg);
+  transition: transform 0.38s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.wisteria {
+  color: #8e44ad;
+}
+
+.belize {
+  color: #2980b9;
+}
+
+.pomegranate {
+  color: #c0392b;
+}
+
+.green {
+  color: #16a085;
+}
+
+.midnight {
+  color: #2c3e50;
 }
 
 .content {
@@ -431,6 +505,68 @@ background-color: white;
   height: 70vh;
   color: transparent;
 }
+
+
+#start_text_container {
+  background-color: rgba(0, 0, 0, 0.16);
+  margin:0px;
+  font-family:'Roboto Thin' ;
+  text-align:center;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size:36px;
+  font-weight:bold;
+  /*padding-top:200px;*/
+  position:fixed;
+  width:100%;
+  bottom:45%;
+  display:block;
+  z-index: -1;
+}
+
+#flip {
+  height:50px;
+  overflow:hidden;
+}
+
+#flip > div > div {
+  font-family:'Roboto' ;
+  color: #efc200;
+  padding:4px 12px;
+  height:45px;
+  margin-bottom:45px;
+  display:inline-block;
+}
+
+#flip div:first-child {
+  animation: show 5s linear infinite;
+}
+
+#flip div div {
+  font-size:36px;
+  /*background:#42c58a;*/
+}
+
+
+@keyframes show {
+  0% {margin-top:-270px;}
+  5% {margin-top:-180px;}
+  33% {margin-top:-180px;}
+  38% {margin-top:-90px;}
+  66% {margin-top:-90px;}
+  71% {margin-top:0px;}
+  99.99% {margin-top:0px;}
+  100% {margin-top:-270px;}
+}
+/*
+p {
+  position:fixed;
+  width:100%;
+  bottom:30px;
+  font-size:12px;
+  color:#999;
+  margin-top:200px;
+}*/
 
 
 /*--------------------------------------------------------------
