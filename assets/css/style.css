@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:700,200');
 
 body {
   font-family: "Open Sans", sans-serif;
@@ -510,7 +510,8 @@ background-color: white;
 #start_text_container {
   background-color: rgba(0, 0, 0, 0.16);
   margin:0px;
-  font-family:'Roboto Thin' ;
+  font-family:'Roboto';
+  font-weight: 200;
   text-align:center;
   color: #ffffff;
   text-transform: uppercase;
@@ -526,12 +527,12 @@ background-color: white;
 
 .start_buttons_container {
   margin:0px;
-  font-family:'Roboto Thin' ;
+  font-family:'Roboto';
+  font-weight: 200;
   text-align:center;
   color: #ffffff;
   text-transform: uppercase;
   font-size:36px;
-  font-weight:bold;
   /*padding-top:200px;*/
   position:fixed;
   width:100%;
